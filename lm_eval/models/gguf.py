@@ -40,7 +40,17 @@ class GGUFLM(LM):
         self.base_url = base_url
         assert self.base_url, "must pass `base_url` to use GGUF LM!"
         self.logprobs = 10
-        self.temperature = 0.0
+
+        print("""
+        \n\n
+        NOTE: the temperature parameter is changed from 0.0 to 0.5 to allow
+        the application of reasoning self-consistency to the model 
+        (https://arxiv.org/pdf/2203.11171.pdf)
+              
+        This value is near the values used in the paper mentioned above
+        \n\n""")
+        self.temperature = 0.5
+
         self.max_length = max_length
 
     def gguf_completion(
