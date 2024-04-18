@@ -63,6 +63,7 @@ class GGUFLM(LM):
                     "prompt": prompt,
                     "logprobs": self.logprobs,
                     "temperature": self.temperature,
+                    "max_tokens": self.max_length,
                 }
                 if continuation:
                     prompt += continuation
