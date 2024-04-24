@@ -43,13 +43,13 @@ class GGUFLM(LM):
 
         print("""
         \n\n
-        NOTE: the temperature parameter is changed from 0.0 to 0.7 to allow
+        NOTE: the temperature parameter is changed from 0.0 to 1.0 to allow
         the application of reasoning self-consistency to the model 
         (https://arxiv.org/pdf/2203.11171.pdf)
               
         This value is near the values used in the paper mentioned above
         \n\n""")
-        self.temperature = 0.7
+        self.temperature = 1.0
 
         self.max_length = max_length
 
